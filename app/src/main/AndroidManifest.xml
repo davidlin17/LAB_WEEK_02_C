@@ -11,15 +11,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LAB_WEEK_02_C">
+
+        <!-- MainActivity sebagai LAUNCHER utama -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true">  <!-- exported="true" karena ini adalah LAUNCHER -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- StandardActivity -->
+        <activity
+            android:name=".StandardActivity"
+            android:launchMode="standard"
+            android:exported="false" />
+
+        <!-- SingleTopActivity -->
+        <activity
+            android:name=".SingleTopActivity"
+            android:launchMode="singleTop"
+            android:exported="false" />
+
     </application>
 
 </manifest>
